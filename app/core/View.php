@@ -88,6 +88,6 @@ class View
      */
     private function getErrorMessage($errorType, $errorMessage)
     {
-        return sprintf("Un %s error ocurrió: %s", $errorType, $errorMessage);
+        return sprintf("Un error %s ocurrió: %s", $errorType, $errorMessage);
     }
 } 
