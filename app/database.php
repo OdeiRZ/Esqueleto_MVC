@@ -7,12 +7,14 @@ $capsule = new Capsule();
 $capsule->addConnection([
 	'driver' => 'mysql',
 	'host' => '127.0.0.1',
+	'database' => 'website',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'website',
 	'charset' => 'utf8',
 	'collation' => 'utf8_general_ci',
 	'prefix' => ''
 ]);
+
+$capsule->setAsGlobal();
 
 $capsule->bootEloquent();
