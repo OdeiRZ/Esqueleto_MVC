@@ -1,24 +1,23 @@
 <?php
 
+/**
+ * Controlador por defecto home.
+ * Llamado cuando no se ha pasado un método a la aplicación.
+ */
 class Home extends Controller
 {
-	protected $user;
-	
-	public function __construct() {
-		$this->user = $this->model('User');
-	}
-	
+    /**
+     * Método por defecto de controlador.
+     *
+     * @return void
+     */
 	public function index($name = '') {
-		$user = $this->user;
-		$user->name = $name;
+        $user = $this->model('user');
+        $user->name = $name;
 		
-		$this->view('home/index', ['name' => $user->name]);
-	}
-	
-	public function create($username = '', $email = '') {
-		User::create([
-			'username' => $username,
-			'email' => $email
-		]);
+        $this->view('home/index', [
+            'name' => $user->name,
+            'mood' => $mood
+        ]);
 	}
 }
