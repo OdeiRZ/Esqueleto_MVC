@@ -39,7 +39,7 @@ class App
         // Obtenemos y parseamos URL
         $url = $this->parseUrl();
         // Manejamos posibles errores
-        $this->initWhoopsErrorHandler();
+        //$this->initWhoopsErrorHandler();
 		
         // Si el controlador existe lo establecemos 
         if (file_exists('../app/controllers/' . ucfirst($url[0]) . '.php')) {

@@ -14,11 +14,11 @@
                 <h1>Bienvenido a la vista home/index</h1>
             </header>
 
-            <p>El contenido inferior es el resultado de los parámetros recibidos desde la URL. Puedes enviar en el controlador y el modelo el nombre también.</p>
+            <p>El contenido inferior es el resultado de los parámetros recibidos desde la URL.</p>
 
             <code>/home/index/[name]/[mood]</code>
 
-            <p>{{ name }} es {{ mood }}</p>
+            <p>{{ name }} => {{ mood }}</p>
         </div>
     </body>
 </html>

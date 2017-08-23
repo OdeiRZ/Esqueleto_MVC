@@ -1,5 +1,7 @@
 <?php
 
+include_once 'View.php';
+
 /**
  * Clase Controlador.
  * Llamado cuando no se ha pasado un método a la aplicación.

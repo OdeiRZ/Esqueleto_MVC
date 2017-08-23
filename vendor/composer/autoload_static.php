@@ -10,9 +10,14 @@ class ComposerStaticInit64bded32130302cab9303e78c512f72c
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
+        '75a7e516166e790f2e82cc0a1785ad06' => __DIR__ . '/../..' . '/app/database.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -36,6 +41,10 @@ class ComposerStaticInit64bded32130302cab9303e78c512f72c
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -70,8 +79,31 @@ class ComposerStaticInit64bded32130302cab9303e78c512f72c
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'W' => 
+        array (
+            'Whoops' => 
+            array (
+                0 => __DIR__ . '/..' . '/filp/whoops/src',
+            ),
+        ),
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
+    );
+
     public static $classMap = array (
-        'User' => __DIR__ . '/../..' . '/app/models/user.php',
+        'App' => __DIR__ . '/../..' . '/app/core/App.php',
+        'Controller' => __DIR__ . '/../..' . '/app/core/Controller.php',
+        'User' => __DIR__ . '/../..' . '/app/models/User.php',
+        'View' => __DIR__ . '/../..' . '/app/core/View.php',
+        'Whoops\\Module' => __DIR__ . '/..' . '/filp/whoops/src/deprecated/Zend/Module.php',
+        'Whoops\\Provider\\Zend\\ExceptionStrategy' => __DIR__ . '/..' . '/filp/whoops/src/deprecated/Zend/ExceptionStrategy.php',
+        'Whoops\\Provider\\Zend\\RouteNotFoundStrategy' => __DIR__ . '/..' . '/filp/whoops/src/deprecated/Zend/RouteNotFoundStrategy.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -79,6 +111,7 @@ class ComposerStaticInit64bded32130302cab9303e78c512f72c
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit64bded32130302cab9303e78c512f72c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit64bded32130302cab9303e78c512f72c::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit64bded32130302cab9303e78c512f72c::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit64bded32130302cab9303e78c512f72c::$classMap;
 
         }, null, ClassLoader::class);

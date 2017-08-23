@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Controlador por defecto home.
+ * Clase Home que extiende de Controller.
  * Llamado cuando no se ha pasado un método a la aplicación.
  */
 class Home extends Controller
@@ -11,7 +11,7 @@ class Home extends Controller
      *
      * @return void
      */
-	public function index($name = '') {
+	public function index($name = '', $mood = 'normal') {
         $user = $this->model('user');
         $user->name = $name;
 		
