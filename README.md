@@ -16,7 +16,7 @@ Este proyecto utiliza [Laravel] y otros muchos componentes que se instalan usand
 - Configurar el sitio de Apache2 para que el `DocumentRoot` sea la carpeta `public/`
 
 ## Licencia
-Esta demo se ofrece bajo licencia [AGPL versión 3].
+Esta demo se ofrece bajo licencia [GPL versión 3].
 
 [Laravel]: https://laravel.com/
 [Composer]: http://getcomposer.org
