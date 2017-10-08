@@ -1,7 +1,7 @@
 Esqueleto MVC
 =========================================
 
-Aplicación web demo que implementa un prototipo estructural básico mediante patrones MVC en PHP.
+Aplicación demo que implementa un prototipo estructural básico mediante patrones MVC en PHP.
 Este proyecto utiliza [Laravel] y otros muchos componentes que se instalan usando [Composer]. 
 
 ## Requisitos
@@ -13,7 +13,7 @@ Este proyecto utiliza [Laravel] y otros muchos componentes que se instalan usand
 
 ## Instalación
 - Ejecutar `composer install` desde la carpeta del proyecto.
-- Configurar el sitio de Apache2 para que el `DocumentRoot` sea la carpeta `public/`
+- Configurar el sitio de Apache2 para que el `DocumentRoot` sea la carpeta `public/`.
 
 ## Licencia
 Esta demo se ofrece bajo licencia [GPL versión 3].
